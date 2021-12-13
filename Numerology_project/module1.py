@@ -27,53 +27,50 @@ def name(label_result,number1):
                 c=list0[t]
         result=result+c
         c=0
-        res=10
-        result1=0
-        result2=0
+    res=10
+    result1=0
+    result2=0
     while(res>=10):
-        result1=result//10
-        result2=result%10
-        res=result1+result2
-        result=res
+       result1=result//10
+       result2=result%10
+       res=result1+result2
+       result=res
     label_result.config(text="Число = %d" % res) 
-    return  
+    return 
 
-def aken(label_result):
-
+def aken(b):
+    res=b.get()
     uusaken=Toplevel()
     tabs=ttk.Notebook(uusaken)
-    if(label_result==1):
+    if(res==1):
         with open("File.txt", "r") as f:
             Label(uusaken, text=f.read()).pack()
-    elif(label_result==2):
-        with open("File2.txt", "r") as f:
+    elif(res==2):
+        with open("TextFile2.txt", "r") as f:
             Label(uusaken, text=f.read()).pack()
-    elif(label_result==3):
-        with open("File3.txt", "r") as f:
+    elif(res==3):
+        with open("TextFile3.txt", "r") as f:
             Label(uusaken, text=f.read()).pack()
-    elif(label_result==4):
-        with open("File4.txt", "r") as f:
+    elif(res==4):
+        with open("TextFile4-.txt", "r") as f:
             Label(uusaken, text=f.read()).pack()
-    elif(label_result==5):
-        with open("File5.txt", "r") as f:
+    elif(res==5):
+        with open("TextFile5.txt", "r") as f:
             Label(uusaken, text=f.read()).pack()
-    elif(label_result==6):
-        with open("File6.txt", "r") as f:
+    elif(res==6):
+        with open("TextFile6.txt", "r") as f:
             Label(uusaken, text=f.read()).pack()
-    elif(label_result==7):
+    elif(res==7):
         with open("File7.txt", "r") as f:
             Label(uusaken, text=f.read()).pack()
-    elif(label_result==8):
-        with open("File8.txt", "r") as f:
+    elif(res==8):
+        with open("TextFile8.txt", "r") as f:
             Label(uusaken, text=f.read()).pack()
-    elif(label_result==9):
-        with open("File9.txt", "r") as f:
+    elif(res==9):
+        with open("TextFile9.txt", "r") as f:
             Label(uusaken, text=f.read()).pack()
-
     else:
         with open("File10.txt", "r") as f:
             Label(uusaken, text=f.read()).pack()
-
-   
     uusaken.mainloop()
 
